@@ -1,0 +1,22 @@
+.page {
+@footer_height: 60px;
+    
+    min-height: 100%;
+    position: relative;
+    
+    &__header {
+        
+    }
+    &__content {
+        padding-bottom: @footer_height;
+    }
+    
+    &__footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: @footer_height;
+        background: #6cf;
+    }
+}
+

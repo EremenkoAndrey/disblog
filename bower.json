@@ -1,0 +1,13 @@
+{
+  "name": "Disblog",
+  "version": "1.0.0",
+  "main": "path/to/main.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "normalize-css": "^4.1.1"
+  },
+  "devDependencies": {}
+}
