@@ -2,6 +2,9 @@
 
 @import (less) "../vendor/normalize-css/normalize.css";
 
+@footer_height: 90px;
+@header_height: 65px;
+
 *{
     box-sizing: border-box;
 }
@@ -17,11 +20,16 @@ body {
     font-size: 100%;
     line-height: 145%;
 }
+.link {
+    color: #4da01d;
+    text-decoration: none;
+}
 
 
 @import "grid.less";
 
 @import "../blocks/page/page.less";
 @import "../blocks/header/header.less";
+@import "../blocks/footer/footer.less";
 @import "../blocks/main-menu/main-menu.less";
 @import "../blocks/page-title/page-title.less";
