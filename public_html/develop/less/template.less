@@ -9,13 +9,18 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    background: #FFF;
 }
-.container {
-    .clearfix;
-    max-width: 1250px;
-    min-width: 320px;
-    margin: 0 auto;
+body {
+    color: #777;
+    font-family: "Trebuchet MS",Helvetica,sans-serif;
+    font-size: 100%;
+    line-height: 145%;
 }
+
+
+@import "grid.less";
 
 @import "../blocks/page/page.less";
-
+@import "../blocks/header/header.less";
+@import "../blocks/main-menu/main-menu.less";

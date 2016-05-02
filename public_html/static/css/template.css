@@ -386,11 +386,19 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  background: #FFF;
+}
+body {
+  color: #777;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 100%;
+  line-height: 145%;
 }
 .container {
-  max-width: 1250px;
+  max-width: 1170px;
   min-width: 320px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 .container:before {
   content: '';
@@ -400,14 +408,70 @@ body {
 .page {
   min-height: 100%;
   position: relative;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding-top: 65px;
+  box-shadow: 0 0 40px #f0f0f0;
+  background: #FFF;
+}
+.page__header {
+  position: fixed;
+  height: 65px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #FFF;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 3px solid #333;
+  -webkit-box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.2);
 }
 .page__content {
-  padding-bottom: 60px;
+  padding-top: 15px;
+  padding-bottom: 90px;
 }
 .page__footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60px;
-  background: #6cf;
+  height: 90px;
+  padding-top: 15px;
+}
+.page__line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  -webkit-box-shadow: inset 0 7px 12px rgba(153, 153, 153, 0.5);
+  -moz-box-shadow: inset 0 7px 12px rgba(153, 153, 153, 0.5);
+  box-shadow: inset 0 7px 12px rgba(153, 153, 153, 0.5);
+}
+.header {
+  height: 100%;
+}
+.main-menu {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
+  align-items: stretch;
+}
+.main-menu__link {
+  width: 16.66666667%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
+  margin-left: -1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.25em;
+  color: #333;
+  font-weight: bold;
+}
+.main-menu__link:hover {
+  color: #4da01d;
+  transition: color 0.3s linear;
 }
