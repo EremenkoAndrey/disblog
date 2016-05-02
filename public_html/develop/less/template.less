@@ -1,9 +1,9 @@
-@import "elements.less";
+@import "mixins.less";
 
 @import (less) "../vendor/normalize-css/normalize.css";
 
 *{
-    .box-sizing()
+    box-sizing: border-box;
 }
 html, body {
     margin: 0;
@@ -24,3 +24,4 @@ body {
 @import "../blocks/page/page.less";
 @import "../blocks/header/header.less";
 @import "../blocks/main-menu/main-menu.less";
+@import "../blocks/page-title/page-title.less";
