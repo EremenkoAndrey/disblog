@@ -1,14 +1,22 @@
 var gulp = require('gulp'),
-    less = require('gulp-less'),
-    rigger = require('gulp-rigger'),
-    postcss = require('gulp-postcss'),
-    sourcemaps = require('gulp-sourcemaps'),
-    autoprefixer = require('autoprefixer');
-    
+        less = require('gulp-less'),
+        rigger = require('gulp-rigger'),
+        postcss = require('gulp-postcss'),
+        sourcemaps = require('gulp-sourcemaps'),
+        autoprefixer = require('autoprefixer'),
+        base64 = require('postcss-base64');
+
 gulp.task('less', function () {
   return gulp.src('./develop/less/template.less')
     .pipe(less())
-    .pipe(postcss([autoprefixer({browsers: ['last 2 versions']})]))
+            .pipe(postcss([
+                autoprefixer({
+                    browsers: ['last 2 versions']
+                }),
+                base64({
+                    extensions: ['.svg']
+                })
+            ]))
     .pipe(gulp.dest('./public_html/static/css'));
 });
 

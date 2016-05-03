@@ -1,12 +1,15 @@
 .main-menu {
     display: flex;
+    position: relative;
     flex-wrap: nowrap;
     height: 100%;
-    align-items: stretch;
-    
+    font-size: 1.25rem;
+
     &__link {
         width: 100%/6;
         display: flex;
+        overflow: hidden;
+        padding: 0 0.5rem;
         align-items: center;
         justify-content: center;
         border-left: 1px solid #d8d8d8;
@@ -14,9 +17,10 @@
         margin-left: -1px;
         text-transform: uppercase;
         text-decoration: none;
-        font-size: 1.25rem;
         color: #333;
+        word-wrap: normal;
         font-weight: bold;
+        height: @header_height;
         
         &:hover {
             color: #4da01d;              
@@ -24,3 +28,57 @@
         }
     }
 }
+
+@media all and (max-width: 1100px) {
+    .main-menu {
+        font-size: 1rem;
+        
+        &__link {
+            font-weight: normal; 
+        }
+    }
+} 
+
+@media all and (max-width: 864px) {
+    .main-menu {
+        flex-direction: column;
+
+        &__link {
+            width: auto;
+            display: none;
+
+            &_active {
+            @width: 0.4em;
+                
+                order: -1;
+                display: flex;
+
+                &::after {
+
+                    content: '';
+                    display: inline-block;
+                    vertical-align: middle;
+                    border-bottom: 0 solid transparent; /*Вверх*/
+                    border-left: @width*0.85 solid transparent; /*Вправо*/
+                    border-right: @width*0.85 solid transparent; /*Влево*/
+                    border-top: @width solid #333; /*Вниз*/
+                    margin-left: 1em;
+                }
+ 
+                &:hover {
+                    &::after {
+                        border-top: @width solid #4da01d; /*Вниз*/
+                        transition: border-top-color 0.3s linear;
+                    }
+                }
+            }
+        }
+    }
+} 
+.element:before {
+
+        content: "";
+        display: block;
+        height: 0;
+        width: 0;
+    } 

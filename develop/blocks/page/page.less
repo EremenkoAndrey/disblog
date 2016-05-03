@@ -3,7 +3,7 @@
     position: relative;
     max-width: 1250px;
     margin: 0 auto -@footer_height;;
-    padding-top: @header_height;
+    padding-top: @header_height * 1.25em;
     padding-bottom: @footer_height;
     box-shadow: 0 0 40px #f0f0f0;
     background: #FFF;
@@ -18,3 +18,8 @@
         border-bottom: 2px solid #333;
     }
 }
+@media all and (max-width: 1100px) {
+    .page {
+        padding-top: @header_height;
+    }
+} 

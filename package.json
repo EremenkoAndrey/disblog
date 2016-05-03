@@ -17,6 +17,7 @@
     "gulp-less": "^3.0.5",
     "gulp-postcss": "^6.1.1",
     "gulp-rigger": "^0.5.8",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sourcemaps": "^1.6.0",
+    "postcss-base64": "^0.4.1"
   }
 }
